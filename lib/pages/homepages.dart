@@ -1,6 +1,8 @@
 import 'dart:convert';
 
 import 'package:api2_project/models/ModelName.dart';
+import 'package:api2_project/pages/photo_api.dart';
+import 'package:api2_project/pages/userscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -38,6 +40,26 @@ class _HomepagesState extends State<Homepages> {
         centerTitle: true,
         title: Text("API Integration"),
         backgroundColor: Colors.cyanAccent,
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PhotoApi()),
+              );
+            },
+            icon: Icon(Icons.navigation),
+          ),
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Userscreen()),
+              );
+            },
+            icon: Icon(Icons.supervised_user_circle_rounded),
+          ),
+        ],
       ),
       backgroundColor: Colors.grey,
       body: Column(
