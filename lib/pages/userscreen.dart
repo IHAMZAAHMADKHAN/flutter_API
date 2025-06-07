@@ -70,7 +70,8 @@ class _UserscreenState extends State<Userscreen> {
                               titile: "Address",
                               value:
                                   snapshot.data![index].address!.city
-                                      .toString(),
+                                      .toString() +
+                                  snapshot.data![index].address!.geo.toString(),
                             ),
                           ],
                         ),
