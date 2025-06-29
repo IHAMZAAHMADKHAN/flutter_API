@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:api2_project/models/ModelName.dart';
 import 'package:api2_project/pages/photo_api.dart';
+import 'package:api2_project/pages/signupscreen.dart';
 import 'package:api2_project/pages/userscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -49,6 +50,15 @@ class _HomepagesState extends State<Homepages> {
               );
             },
             icon: Icon(Icons.navigation),
+          ),
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Signupscreen()),
+              );
+            },
+            icon: Icon(Icons.login),
           ),
           IconButton(
             onPressed: () {
